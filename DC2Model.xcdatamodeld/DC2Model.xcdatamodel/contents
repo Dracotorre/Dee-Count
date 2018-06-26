@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6244" systemVersion="14A343f" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="DTCountCategory" representedClassName="DTCountCategory" syncable="YES">
+        <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="category" inverseEntity="Item" syncable="YES"/>
+    </entity>
+    <entity name="Inventory" representedClassName="DTCountInventory" syncable="YES">
+        <attribute name="count" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="item" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="inventories" inverseEntity="Item" syncable="YES"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="inventories" inverseEntity="Location" syncable="YES"/>
+    </entity>
+    <entity name="Item" representedClassName="DTCountItem" syncable="YES">
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="picture" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="picuuid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DTCountCategory" inverseName="items" inverseEntity="DTCountCategory" syncable="YES"/>
+        <relationship name="inventories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Inventory" inverseName="item" inverseEntity="Inventory" syncable="YES"/>
+    </entity>
+    <entity name="Location" representedClassName="DTCountLocation" syncable="YES">
+        <attribute name="defCatLabel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="picture" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="picuuid" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="inventories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Inventory" inverseName="location" inverseEntity="Inventory" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="DTCountCategory" positionX="-18" positionY="72" width="128" height="73"/>
+        <element name="Inventory" positionX="-36" positionY="45" width="128" height="88"/>
+        <element name="Item" positionX="-63" positionY="-18" width="128" height="148"/>
+        <element name="Location" positionX="-54" positionY="18" width="128" height="120"/>
+    </elements>
+</model>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="14A379a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DTCountAidResetViewController">
+            <connections>
+                <outlet property="actionNowImageButton" destination="pDt-xQ-IK0" id="1EY-Wt-cRT"/>
+                <outlet property="bodyLabel" destination="lgU-mB-pSZ" id="Dd0-jo-wjc"/>
+                <outlet property="replaceInventorySwitch" destination="GKH-lq-6aZ" id="eqf-FU-hvj"/>
+                <outlet property="replaceLabel" destination="DRq-iB-N9D" id="iQq-2o-F62"/>
+                <outlet property="titleLabel" destination="0Zo-rl-38d" id="YVv-9L-VhA"/>
+                <outlet property="titleLabelTopConstraint" destination="bId-oB-7vW" id="zDW-30-QMh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reset Counts" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Zo-rl-38d">
+                    <rect key="frame" x="8" y="32" width="304" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="6AP-HX-QLM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgU-mB-pSZ">
+                    <rect key="frame" x="55" y="62" width="237" height="123"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="123" id="4PD-R5-Sfo"/>
+                    </constraints>
+                    <string key="text">For the next count, use current (or previous) items total counts for comparison, and current counts reset to zero. All other item details will remain.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GKH-lq-6aZ">
+                    <rect key="frame" x="8" y="353" width="51" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="31" id="Q8o-4O-sih"/>
+                        <constraint firstAttribute="width" constant="49" id="h5U-jh-KmV"/>
+                    </constraints>
+                </switch>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="replace compare counts" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRq-iB-N9D">
+                    <rect key="frame" x="65" y="361" width="237" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="237" id="LaI-Jo-pJY"/>
+                        <constraint firstAttribute="height" constant="21" id="epR-Ef-0Nn"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pDt-xQ-IK0">
+                    <rect key="frame" x="86" y="200" width="147" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="6D5-aX-fYg"/>
+                        <constraint firstAttribute="width" constant="147" id="nBU-BB-DOs"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="tintColor" red="0.50579344209999999" green="0.28753661279999998" blue="0.65306122450000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title=" Reset Now" image="restartCounts.png">
+                        <color key="titleColor" red="0.50579344209999999" green="0.28753661279999998" blue="0.65306122450000004" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="resetNowAction:" destination="-1" eventType="touchUpInside" id="iMK-XA-ibq"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="lgU-mB-pSZ" firstAttribute="top" secondItem="0Zo-rl-38d" secondAttribute="bottom" constant="8" id="8jK-tm-dVd"/>
+                <constraint firstItem="0Zo-rl-38d" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="QOp-xJ-LFw"/>
+                <constraint firstItem="DRq-iB-N9D" firstAttribute="centerY" secondItem="GKH-lq-6aZ" secondAttribute="centerY" constant="3" id="Swh-lE-GPK"/>
+                <constraint firstAttribute="centerX" secondItem="pDt-xQ-IK0" secondAttribute="centerX" id="Vw3-n0-fZe"/>
+                <constraint firstItem="GKH-lq-6aZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="WbB-7l-Bpc"/>
+                <constraint firstItem="lgU-mB-pSZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="55" id="Wob-na-WNw"/>
+                <constraint firstItem="pDt-xQ-IK0" firstAttribute="top" secondItem="lgU-mB-pSZ" secondAttribute="bottom" constant="15" id="ZOH-Dw-JdB"/>
+                <constraint firstItem="0Zo-rl-38d" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="32" id="bId-oB-7vW"/>
+                <constraint firstAttribute="bottom" secondItem="GKH-lq-6aZ" secondAttribute="bottom" constant="96" id="hBQ-TC-nVj"/>
+                <constraint firstAttribute="trailing" secondItem="lgU-mB-pSZ" secondAttribute="trailing" constant="28" id="pfu-Ig-A5W"/>
+                <constraint firstAttribute="trailing" secondItem="0Zo-rl-38d" secondAttribute="trailing" constant="8" id="rUs-n6-fKH"/>
+                <constraint firstItem="GKH-lq-6aZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="xdn-3D-FCz"/>
+                <constraint firstItem="DRq-iB-N9D" firstAttribute="leading" secondItem="GKH-lq-6aZ" secondAttribute="trailing" constant="8" id="yVo-qT-Wlm"/>
+            </constraints>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="restartCounts.png" width="46" height="46"/>
+    </resources>
+</document>
